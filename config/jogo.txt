@@ -1,0 +1,3 @@
+titulo=DiRT 2
+versao=Dirt 2 (USA, Europe)
+sha1_xex=cdcbe29702fbf18e3e63002096d94d081cbf488f
