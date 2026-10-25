@@ -1,1 +1,14 @@
 # DiRT 2: hooks in the game's code (src/)
+
+# A frame handed to the GPU (right after the game's VdSwap): counts the frame rate (src/port/fps_overlay.h)
+[[midasm_hook]]
+address = 0x829EA1D0
+name = "PortFrame"
+
+# Frame rate (src/port/frame_rate.h): the presentation interval the XDK's D3D hands the GPU, 2 vertical blanks
+# (30 fps), becomes 1 at 60 fps or more
+[[midasm_hook]]
+address = 0x829E9C0C
+name = "PortPresentInterval"
+registers = ["r11"]
+after_instruction = true
