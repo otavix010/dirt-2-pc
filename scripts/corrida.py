@@ -10,7 +10,7 @@ import time
 from pathlib import Path
 
 sys.path.insert(0, str(Path(__file__).resolve().parent))
-from port import EXE, ROOT  # noqa: E402
+from port import EXE, ROOT, kill_from  # noqa: E402
 from tecla import press  # noqa: E402
 
 STEPS = [
@@ -40,7 +40,7 @@ def main():
     ap.add_argument('--var', action='append', default=[])
     ap.add_argument('--segundos', type=int, default=3600)
     a = ap.parse_args()
-    subprocess.run(['taskkill', '/F', '/IM', EXE.name], capture_output=True)
+    kill_from(ROOT, EXE.name)
     time.sleep(3)  # the last run's process gone first
     args = [sys.executable, '-I', str(ROOT / 'scripts' / 'rodar.py'), '--y', '1000', '--segundos', str(a.segundos),
             '--prints', str(a.segundos - 1), '--pad', '12:START,20:START,25-60@3:A', '--var', 'REX_MOSTRAR_FPS=true']
