@@ -5,6 +5,8 @@
 //   - readback_resolve: the game reads back on the CPU the picture it renders to set its exposure; with the runtime's
 //     default (no readback) it reads nothing and darkens every scene and menu. As Xenia's compatibility notes found
 //     (xenia-canary/game-compatibility#326), the readback fixes the brightness and the water's reflections.
+//     "fast" reads the frame before, with no wait: the same brightness at 60 fps, where "full" (waiting for the GPU
+//     at each frame) held the menus at 52-54 at 2x.
 
 #pragma once
 
@@ -30,6 +32,6 @@ class Dirt2App : public PortApp {
 
   void OnPreSetup(rex::RuntimeConfig& config) override {
     PortApp::OnPreSetup(config);
-    port_options::SetUnlessChosen("readback_resolve", "full");
+    port_options::SetUnlessChosen("readback_resolve", "fast");
   }
 };
