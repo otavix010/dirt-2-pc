@@ -12,7 +12,7 @@ O jeito mais fácil de jogar é pelo [Otavix Launcher](https://github.com/otavix
 
 | | Xbox 360 | Port |
 |--|--|--|
-| Taxa de quadros | 30 fps | **60** fps (quadros reais) |
+| Taxa de quadros | 30 fps | **60** ou **120** fps (quadros reais) |
 | Resolução interna | 720p | 720p, **1440p** ou 4K |
 | Ampliação para a tela | — | AMD FSR 1, AMD CAS, FSR 3 temporal (experimental) ou bilinear, com nitidez ajustável |
 | Anti-aliasing | o do jogo | o do jogo, mais FXAA opcional |
@@ -24,6 +24,7 @@ DLSS e XeSS não entram: os dois precisam de vetores de movimento, que os jogos 
 ## Estado dos testes
 
 - Carreira, menus e corrida (Battersea, rallycross) a 60 fps em 2x: média de 60,1 e mínimo de 55 com o carro acelerando, batendo e com dano total.
+- 120 fps: o cronômetro da corrida segue o tempo real (5,15 s de corrida em 5,20 s medidos) e a física não muda com a taxa: na mesma arrancada, a velocidade nos mesmos instantes da corrida é a mesma a 60 e a 120 (25 mph a 0,9 s, 58 a 2,6 s, 69 a 3,8 s, 84 a 5,6 s). O motor do jogo (EGO) é o mesmo da versão de PC, que já roda sem trava de quadros. Em 1x a corrida fica entre 100 e 120.
 - Brilho certo (com o readback rápido), som em 5.1, replays e flashbacks (unidade de cache).
 
 ## Gerar à mão (sem o launcher)
@@ -43,7 +44,7 @@ Ficam em `dirt2.toml` ao lado do executável, ou no arquivo indicado pela variá
 
 | Opção | Valores | Padrão |
 |--|--|--|
-| `fps` | 30, 60 | 60 |
+| `fps` | 30, 60, 120 | 60 |
 | `resolution_scale` | 1 (720p), 2 (1440p), 3 (4K) | 2 |
 | `filtro` | `fsr`, `cas`, `fsr3` (temporal, experimental), `bilinear` | `fsr` |
 | `nitidez` | 0 a 100 | 70 |
