@@ -56,7 +56,7 @@ DLSS e XeSS não entram: os dois precisam de vetores de movimento, que os jogos 
 
 ## Estado dos testes
 
-- Carreira, menus e corrida (Battersea, rallycross) a 60 fps em 2x: média de 60,1 e mínimo de 55 com o carro acelerando, batendo e com dano total.
+- Corrida da carreira (Battersea, rallycross) a 60 fps em 2x, na engine 1.0.1: 3 minutos acelerando, batendo e com dano no carro, média de 60,5 e mínimo de 58 (GPU em 62%).
 - 120 fps: o cronômetro da corrida segue o tempo real (5,15 s de corrida em 5,20 s medidos) e a física não muda com a taxa: na mesma arrancada, a velocidade nos mesmos instantes da corrida é a mesma a 60 e a 120 (25 mph a 0,9 s, 58 a 2,6 s, 69 a 3,8 s, 84 a 5,6 s). O motor do jogo (EGO) é o mesmo da versão de PC, que já roda sem trava de quadros. Em 1x a corrida fica entre 100 e 120.
 - Brilho certo (com o readback rápido), som em 5.1, replays e flashbacks (unidade de cache).
 
@@ -79,11 +79,11 @@ DLSS e XeSS não entram: os dois precisam de vetores de movimento, que os jogos 
 
 ## Desempenho medido
 
-FPS de jogo. **Só colocamos o que foi medido**, e com **um jogo só rodando** (com outra carga junto, o desempenho pode cair bastante). Foram medidos no runtime anterior; na engine 1.0.0 a saída da GPU saiu **idêntica quadro a quadro** nos 4 ports e o boot não falhou, mas os FPS **ainda não foram remedidos**.
+FPS de jogo. **Só colocamos o que foi medido**, e com **um jogo só rodando** (com outra carga junto, o desempenho pode cair bastante). Os números de 2x são da engine 1.0.1 (a saída da GPU é **idêntica quadro a quadro** à da 1.0.0 nos 4 ports); o que veio do runtime anterior está indicado como tal.
 
 | Máquina | CPU | GPU | FPS |
 |---|---|---|---|
-| **PC 1** | Ryzen 7 9800X3D | RTX 5080 | 2x: carreira e corrida (Battersea, rallycross) **média 60,1**, mínimo 55; a 1x a corrida fica entre 100 e 120; 120 validado (mesma física a 60 e a 120) |
+| **PC 1** | Ryzen 7 9800X3D | RTX 5080 | 2x: corrida (Battersea, rallycross) **média 60,5**, mínimo 58 (engine 1.0.1); a 1x a corrida fica entre 100 e 120 e o 120 foi validado (mesma física a 60 e a 120), medidos no runtime anterior |
 | **PC 2** | Core i5-11400F | RX 9060 XT | não medido |
 | **Notebook** | Core i5-10300H (4/8) | GTX 1650 | não medido |
 | **Portátil** | Legion Go S (Linux) | Radeon 780M | não suportado |
