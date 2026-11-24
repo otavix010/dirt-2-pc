@@ -1,7 +1,7 @@
 titulo=DiRT 2
 versao=Dirt 2 (USA, Europe)
 sha1_xex=cdcbe29702fbf18e3e63002096d94d081cbf488f
-iso_ref=7838695424:bcac48272f4b755d271fb3e38fae3fbe85266c30
+iso_ref=7838695424:bcac48272f4b755d271fb3e38fae3fbe85266c30 7838695424:b694b8bb03d111ee5cdc872031711cd435a1d4c6
 title_id=434D0819
 cor=220,140,30
 marca=Codemasters
